@@ -30,6 +30,25 @@ $ npm run deploy_greeter:ganache ...(example)
 $ npm run deploy_greeter:rinkeby ...(example)
 ```
 
+For successful deployment, console prints looks like this:
+
+```bash
+>>> Network is set to rinkeby
+Deployer account: 0x33a2Ce8C986b3321C82cB127f3090F6c10D8D990
+Balance: 12.222449615766618507 ETH
+Deploying Greeter contract ...
+Verifying Greeter contract ...
+Nothing to compile
+No need to generate any newer typings.
+Successfully submitted source code for contract
+contracts/Greeter.sol:Greeter at 0x3882c28959Ff399f4c8E39fA78929c7b98724dFB
+for verification on the block explorer. Waiting for verification result...
+
+Successfully verified contract Greeter on Etherscan.
+https://rinkeby.etherscan.io/address/0x3882c28959Ff399f4c8E39fA78929c7b98724dFB#code
+=========================================
+Greeter deployed to: 0x3882c28959Ff399f4c8E39fA78929c7b98724dFB
+```
 ## Verification
 
 When verifying with block explorers, uncomment the ff code snippet from `scripts/deploy_*.ts`
