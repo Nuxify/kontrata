@@ -1,5 +1,15 @@
 {
-  "name": "hardhat-project",
+  "name": "kontrata",
+  "scripts": {
+    "compile": "npx hardhat clean; npx hardhat compile",
+    "accounts": "npx hardhat accounts",
+    "test": "npx hardhat test --network ganache",
+    "test:gas": "REPORT_GAS=true npx hardhat test --network ganache",
+    "lint": "eslint --ext .ts,.js --ignore-path .gitignore .",
+    "lint:fix": "eslint --ext .ts,.js --fix --ignore-path .gitignore .",
+    "deploy_greeter:ganache": "NETWORK=ganache npx hardhat run --network ganache scripts/deploy_greeter.ts",
+    "deploy_greeter:rinkeby": "NETWORK=rinkeby npx hardhat run --network rinkeby scripts/deploy_greeter.ts"
+  },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.6",
     "@nomiclabs/hardhat-etherscan": "^3.1.0",

@@ -1,4 +1,5 @@
-# Advanced Sample Hardhat Project
+# Kontrata
+EVM-based smart contract development template using Solidity and Hardhat (and Remix IDE)
 
 This project demonstrates an advanced Hardhat use case, integrating other tools commonly used alongside Hardhat in the ecosystem.
 
