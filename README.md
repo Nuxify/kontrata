@@ -2,6 +2,12 @@
 
 EVM-based smart contract development template using Solidity and Hardhat (and Remix IDE)
 
+## Solidity Contract Style Guide Convention
+
+A good contract, aside from being secure and optimized, is readable.
+
+Please refer here for styling guide rules: https://github.com/ethereum/solidity/blob/v0.5.1/docs/style-guide.rst
+
 ## Local Development
 
 ```bash
@@ -49,6 +55,7 @@ https://rinkeby.etherscan.io/address/0x3882c28959Ff399f4c8E39fA78929c7b98724dFB#
 =========================================
 Greeter deployed to: 0x3882c28959Ff399f4c8E39fA78929c7b98724dFB
 ```
+
 ## Verification
 
 When verifying with block explorers, uncomment the ff code snippet from `scripts/deploy_*.ts`
