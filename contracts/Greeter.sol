@@ -27,4 +27,9 @@ contract Greeter {
     function greet() public view returns (string memory) {
         return greeting;
     }
+
+    /// Helper Functions
+
+     // Etherscan trick. Increment the build number every deployment.
+    function delBuildNumber3() internal pure {}
 }
