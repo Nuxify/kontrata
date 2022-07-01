@@ -8,7 +8,8 @@
     "lint": "eslint --ext .ts,.js --ignore-path .gitignore .",
     "lint:fix": "eslint --ext .ts,.js --fix --ignore-path .gitignore .",
     "deploy_greeter:ganache": "NETWORK=ganache npx hardhat run --network ganache scripts/deploy_greeter.ts",
-    "deploy_greeter:rinkeby": "NETWORK=rinkeby npx hardhat run --network rinkeby scripts/deploy_greeter.ts"
+    "deploy_greeter:rinkeby": "NETWORK=rinkeby npx hardhat run --network rinkeby scripts/deploy_greeter.ts",
+    "generate_merkle": "npx hardhat run --network rinkeby scripts/gen_merkle.ts"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.6",
@@ -41,5 +42,9 @@
     "ts-node": "^10.8.1",
     "typechain": "^5.2.0",
     "typescript": "^4.7.3"
+  },
+  "dependencies": {
+    "keccak256": "^1.0.6",
+    "merkletreejs": "^0.2.32"
   }
 }
