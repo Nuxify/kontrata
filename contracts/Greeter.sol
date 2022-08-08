@@ -31,5 +31,5 @@ contract Greeter {
     /// Helper Functions
 
     // Etherscan trick. Increment the build number every deployment.
-    function delBuildNumber3() internal pure {}
+    function _delBuildNumber3() internal pure {}
 }
