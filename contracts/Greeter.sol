@@ -1,7 +1,7 @@
-//SPDX-License-Identifier: Unlicense
+// SPDX-License-Identifier: UNLICENSED
 pragma solidity 0.8.15;
 
-/*
+/**
  ▄    ▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄        ▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄ 
 ▐░▌  ▐░▌▐░░░░░░░░░░░▌▐░░▌      ▐░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌
 ▐░▌ ▐░▌ ▐░█▀▀▀▀▀▀▀█░▌▐░▌░▌     ▐░▌ ▀▀▀▀█░█▀▀▀▀ ▐░█▀▀▀▀▀▀▀█░▌▐░█▀▀▀▀▀▀▀█░▌ ▀▀▀▀█░█▀▀▀▀ ▐░█▀▀▀▀▀▀▀█░▌
@@ -27,11 +27,19 @@ contract Greeter {
         greeting = _greeting;
     }
 
+    /**
+     * Set greeting message
+     * @param _greeting greeting message
+     */
     function setGreeting(string memory _greeting) public {
         console.log("Changing greeting from '%s' to '%s'", greeting, _greeting);
         greeting = _greeting;
     }
 
+    /**
+     * Get greeting message
+     * @return string
+     */
     function greet() public view returns (string memory) {
         return greeting;
     }
