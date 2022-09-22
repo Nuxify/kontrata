@@ -36,8 +36,14 @@ const config: HardhatUserConfig = {
     ganache: {
       url: "http://127.0.0.1:8545",
     },
+    // to be deprecated: https://blog.ethereum.org/2022/06/21/testnet-deprecation
     rinkeby: {
       url: process.env.RINKEBY_RPC || "",
+      accounts:
+        process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+    },
+    goerli: {
+      url: process.env.GOERLI_RPC || "",
       accounts:
         process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
     },

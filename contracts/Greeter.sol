@@ -29,7 +29,7 @@ contract Greeter {
      * Set greeting message
      * @param _greeting greeting message
      */
-    function setGreeting(string memory _greeting) public {
+    function setGreeting(string memory _greeting) external {
         console.log("Changing greeting from '%s' to '%s'", greeting, _greeting);
         greeting = _greeting;
     }
@@ -45,5 +45,5 @@ contract Greeter {
     /// Helper Functions
 
     // Etherscan trick. Increment the build number every deployment.
-    function _delBuildNumber3() internal pure {}
+    function _delBuildNumber4() internal pure {}
 }
