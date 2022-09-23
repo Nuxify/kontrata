@@ -23,17 +23,21 @@ async function main() {
   // get and deploy contract
   const Greeter = await hre.ethers.getContractFactory("Greeter")
   console.log("Deploying Greeter contract ...")
-  const deployed = await Greeter.deploy("Hello, Hardhat!")
+  const deployed = await Greeter.deploy("Kontrata Smart Contracts Template from Nuxify")
   contract = await deployed.deployed()
   console.log(`Deployed Greeter contract to: ${contract.address}`)
 
   // verify in contract in explorer (etherscan, etc.)
-  await sleep(1000)
+  await sleep(15000)
   console.log("Verifying Greeter contract ...")
-  await hre.run("verify:verify", {
-    address: contract.address,
-    constructorArguments: ["Hello, Kontrata!"],
-  })
+  await hre
+    .run("verify:verify", {
+      address: contract.address,
+      constructorArguments: ["Kontrata Smart Contracts Template from Nuxify"],
+    })
+    .catch((err) => {
+      console.error("Etherscan verify error:", err)
+    })
 
   console.log("=========================================")
   console.log("Greeter deployed to:", contract.address)
