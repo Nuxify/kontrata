@@ -41,7 +41,7 @@ For successful deployment, console prints looks like this:
 
 ```bash
 >>> Network is set to goerli
-Deployer account: 0x33a2Ce8C986b3321C82cB127f3090F6c10D8D990
+Deployer account: <deployer-wallet-address>
 Balance: 12.222449615766618507 ETH
 Deploying Greeter contract ...
 Verifying Greeter contract ...
