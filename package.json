@@ -8,7 +8,6 @@
     "lint": "eslint --ext .ts,.js --ignore-path .gitignore .",
     "lint:fix": "eslint --ext .ts,.js --fix --ignore-path .gitignore .",
     "deploy_greeter:ganache": "NETWORK=ganache npx hardhat run --network ganache scripts/deploy_greeter.ts",
-    "deploy_greeter:rinkeby": "NETWORK=rinkeby npx hardhat run --network rinkeby scripts/deploy_greeter.ts",
     "deploy_greeter:goerli": "NETWORK=goerli npx hardhat run --network goerli scripts/deploy_greeter.ts",
     "generate_merkle": "npx hardhat run --network goerli scripts/gen_merkle.ts"
   },
