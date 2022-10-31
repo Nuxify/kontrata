@@ -27,6 +27,18 @@ $ npm run lint
 $ npm run lint:fix
 ```
 
+## Third-Party Libraries
+
+```bash
+# Below are some popular libraries to help smart contracts development
+
+# install latest openzeppelin (https://www.npmjs.com/package/@openzeppelin/contracts)
+$ npm i @openzeppelin/contracts
+
+# install latest azuki erc721a (https://www.npmjs.com/package/erc721a)
+$ npm i erc721a
+```
+
 ## Deployment
 
 ```bash
