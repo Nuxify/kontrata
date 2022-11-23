@@ -9,7 +9,7 @@
     "lint:fix": "eslint --ext .ts,.js --fix --ignore-path .gitignore .",
     "deploy_greeter:ganache": "NETWORK=ganache npx hardhat run --network ganache scripts/deploy_greeter.ts",
     "deploy_greeter:goerli": "NETWORK=goerli npx hardhat run --network goerli scripts/deploy_greeter.ts",
-    "generate_merkle": "npx hardhat run --network goerli scripts/gen_merkle.ts"
+    "generate_merkle": "npx hardhat run scripts/gen_merkle.ts"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^2.0.0",
