@@ -37,6 +37,9 @@ $ npm i @openzeppelin/contracts
 
 # install latest azuki erc721a (https://www.npmjs.com/package/erc721a)
 $ npm i erc721a
+
+# include OpenSea operator filter registry (for on-chain creator's fee implementation)
+Download at https://github.com/ProjectOpenSea/operator-filter-registry
 ```
 
 ## Deployment
