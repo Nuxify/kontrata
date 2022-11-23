@@ -27,6 +27,12 @@ $ npm run lint
 $ npm run lint:fix
 ```
 
+## Remix IDE
+```bash
+# To run in Remix, run in root location and open https://remix.ethereum.org/
+$ remixd -s ./ --remix-ide https://remix.ethereum.org 
+
+```
 ## Third-Party Libraries
 
 ```bash
