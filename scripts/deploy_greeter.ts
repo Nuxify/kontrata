@@ -14,9 +14,8 @@ async function main() {
   let balance = await deployer.getBalance()
 
   let contract
-  let network = process.env.NETWORK ? process.env.NETWORK : "rinkeby"
 
-  console.log(`>>> Network is set to ${network}`)
+  console.log(`>>> Network is set to ${process.env.NETWORK}`)
   console.log(`Deployer account: ${account}`)
   console.log(`Balance: ${hre.ethers.utils.formatEther(balance)} ETH`)
 
@@ -28,7 +27,7 @@ async function main() {
   console.log(`Deployed Greeter contract to: ${contract.address}`)
 
   // verify in contract in explorer (etherscan, etc.)
-  await sleep(15000)
+  await sleep(35000) // some networks require it higher to prevent errors
   console.log("Verifying Greeter contract ...")
   await hre
     .run("verify:verify", {
