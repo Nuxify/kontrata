@@ -14,7 +14,7 @@ async function main() {
   let balance = await deployer.getBalance()
 
   let contract
-  let network = process.env.NETWORK ? process.env.NETWORK : "rinkeby"
+  let network = process.env.NETWORK ? process.env.NETWORK : "goerli"
 
   console.log(`>>> Network is set to ${network}`)
   console.log(`Deployer account: ${account}`)
