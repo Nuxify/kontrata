@@ -14,7 +14,7 @@ async function main() {
   let balance = await deployer.getBalance()
 
   let contract
-  let network = process.env.NETWORK ? process.env.NETWORK : "rinkeby"
+  let network = process.env.NETWORK ? process.env.NETWORK : "goerli"
 
   console.log(`>>> Network is set to ${network}`)
   console.log(`Deployer account: ${account}`)
@@ -23,12 +23,14 @@ async function main() {
   // get and deploy contract
   const Greeter = await hre.ethers.getContractFactory("Greeter")
   console.log("Deploying Greeter contract ...")
-  const deployed = await Greeter.deploy("Kontrata Smart Contracts Template from Nuxify")
+  const deployed = await Greeter.deploy(
+    "Kontrata Smart Contracts Template from Nuxify"
+  )
   contract = await deployed.deployed()
   console.log(`Deployed Greeter contract to: ${contract.address}`)
 
   // verify in contract in explorer (etherscan, etc.)
-  await sleep(15000)
+  await sleep(35000) // some networks require it higher to prevent errors
   console.log("Verifying Greeter contract ...")
   await hre
     .run("verify:verify", {

@@ -55,7 +55,6 @@ Download at https://github.com/ProjectOpenSea/operator-filter-registry
 $ npm run deploy_<contract>:<network>
 $ npm run deploy_greeter:ganache ...(example)
 $ npm run deploy_greeter:goerli ...(example)
-$ npm run deploy_greeter:rinkeby ...(example)
 ```
 
 For successful deployment, console prints looks like this:
