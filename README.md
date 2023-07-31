@@ -25,6 +25,9 @@ $ npm run test:gas
 # run linter with option to fix
 $ npm run lint
 $ npm run lint:fix
+
+# check contract sizes
+$ npx hardhat size-contracts
 ```
 
 ## Remix IDE
