@@ -57,13 +57,13 @@ $ npm i operator-filter-registry
 # deploy to contract to network
 $ npm run deploy_<contract>:<network>
 $ npm run deploy_greeter:ganache ...(example)
-$ npm run deploy_greeter:goerli ...(example)
+$ npm run deploy_greeter:mumbai ...(example)
 ```
 
 For successful deployment, console prints looks like this:
 
 ```bash
->>> Network is set to goerli
+>>> Network is set to mumbai
 Deployer account: <deployer-wallet-address>
 Balance: 12.222449615766618507 ETH
 Deploying Greeter contract ...
@@ -71,13 +71,13 @@ Verifying Greeter contract ...
 Nothing to compile
 No need to generate any newer typings.
 Successfully submitted source code for contract
-contracts/Greeter.sol:Greeter at 0x093eb7ccAfa165D8D35c6666984de510Be58cBd2
+contracts/Greeter.sol:Greeter at 0xc48816e27A4c8a13be9379A32bEf99400d57689b
 for verification on the block explorer. Waiting for verification result...
 
 Successfully verified contract Greeter on Etherscan.
-https://goerli.etherscan.io/address/0x093eb7ccAfa165D8D35c6666984de510Be58cBd2#code
+https://mumbai.polygonscan.com/address/0xc48816e27A4c8a13be9379A32bEf99400d57689b#code
 =========================================
-Greeter deployed to: 0x093eb7ccAfa165D8D35c6666984de510Be58cBd2
+Greeter deployed to: 0xc48816e27A4c8a13be9379A32bEf99400d57689b
 ```
 
 ## Verification
@@ -86,7 +86,7 @@ When verifying with block explorers, uncomment the ff code snippet from `scripts
 
 ```bash
 // verify in contract in explorer (etherscan, etc.)
-await sleep(1000)
+await sleep(15000)
 console.log("Verifying Greeter contract ...")
 await hre.run("verify:verify", {
     address: greeter.address,

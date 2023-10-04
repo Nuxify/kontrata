@@ -36,8 +36,8 @@ const config: HardhatUserConfig = {
     ganache: {
       url: "http://127.0.0.1:8545",
     },
-    goerli: {
-      url: process.env.GOERLI_RPC || "",
+    mumbai: {
+      url: process.env.MUMBAI_RPC || "",
       accounts:
         process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
     },
@@ -47,7 +47,7 @@ const config: HardhatUserConfig = {
     currency: "USD",
   },
   etherscan: {
-    apiKey: process.env.ETHERSCAN_API_KEY,
+    apiKey: process.env.POLYGONSCAN_API_KEY,
   },
 }
 

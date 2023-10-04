@@ -1,4 +1,5 @@
 import hre from "hardhat"
+// eslint-disable-next-line node/no-extraneous-require
 const fs = require("fs-extra")
 
 async function main() {
@@ -8,13 +9,12 @@ async function main() {
   await hre.run("compile")
 
   // deployer info
-  let [deployer] = await hre.ethers.getSigners()
-  let deployerAddress = await deployer.getAddress()
-  let account = await hre.ethers.utils.getAddress(deployerAddress)
-  let balance = await deployer.getBalance()
+  const [deployer] = await hre.ethers.getSigners()
+  const deployerAddress = await deployer.getAddress()
+  const account = await hre.ethers.utils.getAddress(deployerAddress)
+  const balance = await deployer.getBalance()
 
-  let contract
-  let network = process.env.NETWORK ? process.env.NETWORK : "goerli"
+  const network = process.env.NETWORK ? process.env.NETWORK : "mumbai"
 
   console.log(`>>> Network is set to ${network}`)
   console.log(`Deployer account: ${account}`)
@@ -26,11 +26,11 @@ async function main() {
   const deployed = await Greeter.deploy(
     "Kontrata Smart Contracts Template from Nuxify"
   )
-  contract = await deployed.deployed()
+  const contract = await deployed.deployed()
   console.log(`Deployed Greeter contract to: ${contract.address}`)
 
   // verify in contract in explorer (etherscan, etc.)
-  await sleep(35000) // some networks require it higher to prevent errors
+  await sleep(15000) // some networks require it higher to prevent errors
   console.log("Verifying Greeter contract ...")
   await hre
     .run("verify:verify", {
