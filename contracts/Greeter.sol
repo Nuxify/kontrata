@@ -29,11 +29,16 @@ contract Greeter {
         greeting = _greeting;
     }
 
+    event LogSetGreeting(string greeting, uint256 timestamp);
+
     /// @notice Sets the greeting
+    /// @dev Emits an event with the new greeting and timestamp
     /// @param _greeting new greeting message
     function setGreeting(string calldata _greeting) external {
         console.log("Changing greeting from '%s' to '%s'", greeting, _greeting);
         greeting = _greeting;
+
+        emit LogSetGreeting(_greeting, block.timestamp);
     }
 
     /// @notice Get latest greeting
