@@ -14,7 +14,9 @@ pragma solidity 0.8.19;
 ▐░▌  ▐░▌▐░░░░░░░░░░░▌▐░▌      ▐░░▌     ▐░▌     ▐░▌       ▐░▌▐░▌       ▐░▌     ▐░▌     ▐░▌       ▐░▌
  ▀    ▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀        ▀▀       ▀       ▀         ▀  ▀         ▀       ▀       ▀         ▀    
 
- @Author: Nuxify Inc.                                                                                                                                                                                                                        
+ @author Nuxify Inc.
+ @notice Simple greeter contract
+ @dev Uses hardhat console for debugging and demo purposes                                                                                                                                                                                                                          
 */
 
 import "hardhat/console.sol";
@@ -27,25 +29,22 @@ contract Greeter {
         greeting = _greeting;
     }
 
-    /**
-     * Set greeting message
-     * @param _greeting greeting message
-     */
-    function setGreeting(string memory _greeting) external {
+    /// @notice Sets the greeting
+    /// @param _greeting new greeting message
+    function setGreeting(string calldata _greeting) external {
         console.log("Changing greeting from '%s' to '%s'", greeting, _greeting);
         greeting = _greeting;
     }
 
-    /**
-     * Get greeting message
-     * @return string
-     */
+    /// @notice Get latest greeting
+    /// @return string latest greeting message
     function greet() public view returns (string memory) {
         return greeting;
     }
 
     /// Helper Functions
 
-    // Etherscan trick. Increment the build number every deployment.
-    function _delBuildNumber7() internal pure {}
+    /// @dev Etherscan trick when verifying and etherscan returns error. Increment the build number every deployment.
+    /// @dev Completely optional.
+    function _delBuildNumber1() internal pure {}
 }
