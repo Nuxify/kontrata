@@ -14,7 +14,7 @@ async function main() {
   const account = await hre.ethers.utils.getAddress(deployerAddress)
   const balance = await deployer.getBalance()
 
-  const network = process.env.NETWORK ? process.env.NETWORK : "mumbai"
+  const network = process.env.NETWORK ? process.env.NETWORK : "sepolia"
 
   console.log(`>>> Network is set to ${network}`)
   console.log(`Deployer account: ${account}`)

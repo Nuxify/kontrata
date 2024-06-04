@@ -36,8 +36,13 @@ const config: HardhatUserConfig = {
     ganache: {
       url: "http://127.0.0.1:8545",
     },
-    mumbai: {
-      url: process.env.MUMBAI_RPC || "",
+    sepolia: {
+      url: process.env.SEPOLIA_RPC || "",
+      accounts:
+        process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+    },
+    ethereum: {
+      url: process.env.ETHEREUM_RPC || "",
       accounts:
         process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
     },
@@ -47,7 +52,7 @@ const config: HardhatUserConfig = {
     currency: "USD",
   },
   etherscan: {
-    apiKey: process.env.POLYGONSCAN_API_KEY,
+    apiKey: process.env.ETHERSCAN_API_KEY,
   },
 }
 

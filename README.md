@@ -57,13 +57,13 @@ $ npm i operator-filter-registry
 # deploy to contract to network
 $ npm run deploy_<contract>:<network>
 $ npm run deploy_greeter:ganache ...(example)
-$ npm run deploy_greeter:mumbai ...(example)
+$ npm run deploy_greeter:sepolia ...(example)
 ```
 
 For successful deployment, console prints looks like this:
 
 ```bash
->>> Network is set to mumbai
+>>> Network is set to sepolia
 Deployer account: <deployer-wallet-address>
 Balance: 12.222449615766618507 ETH
 Deploying Greeter contract ...
@@ -71,11 +71,11 @@ Verifying Greeter contract ...
 Nothing to compile
 No need to generate any newer typings.
 Successfully submitted source code for contract
-contracts/Greeter.sol:Greeter at 0x927ec7f1f1CA6b09d0c448868aAB2C56d465a6e8
+contracts/Greeter.sol:Greeter at 0x0e10e90f67C67c2cB9DD5071674FDCfb7853a6F5
 for verification on the block explorer. Waiting for verification result...
 
 Successfully verified contract Greeter on Etherscan.
-https://mumbai.polygonscan.com/address/0x927ec7f1f1CA6b09d0c448868aAB2C56d465a6e8#code
+https://sepolia.polygonscan.com/address/0x927ec7f1f1CA6b09d0c448868aAB2C56d465a6e8#code
 =========================================
 Greeter deployed to: 0x927ec7f1f1CA6b09d0c448868aAB2C56d465a6e8
 ```
