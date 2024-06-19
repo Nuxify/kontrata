@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: UNLICENSED
-pragma solidity 0.8.19;
+pragma solidity 0.8.26;
 
 /**
  ▄    ▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄        ▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄ 
@@ -19,7 +19,7 @@ pragma solidity 0.8.19;
  @dev Uses hardhat console for debugging and demo purposes                                                                                                                                                                                                                          
 */
 
-import "hardhat/console.sol";
+import {console} from "hardhat/console.sol";
 
 contract Greeter {
     string private greeting;
