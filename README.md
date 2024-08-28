@@ -6,7 +6,7 @@ EVM-based smart contracts development template using Solidity and Hardhat (and R
 
 A good contract, aside from being secure and optimized, is readable.
 
-Please refer here for styling guide rules: https://github.com/ethereum/solidity/blob/v0.5.1/docs/style-guide.rst
+Please refer here for styling guide rules: https://github.com/ethereum/solidity/blob/v0.8.26/docs/style-guide.rst
 
 ## Local Development
 
