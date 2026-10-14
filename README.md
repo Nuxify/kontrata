@@ -65,6 +65,7 @@ $ forge script script/Counter.s.sol:DeployCounterScript --rpc-url $MAINNET_RPC_U
 ```shell
 $ cast call $CONTRACT_ADDRESS "number()(uint256)" --rpc-url $LOCAL_RPC_URL
 $ cast send $CONTRACT_ADDRESS "increment()" --rpc-url $LOCAL_RPC_URL --private-key $LOCAL_PRIVATE_KEY
+$ cast send $CONTRACT_ADDRESS "setNumber(uint256)" 100 --rpc-url $LOCAL_RPC_URL --private-key $LOCAL_PRIVATE_KEY
 ```
 
 ### Help
