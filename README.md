@@ -13,7 +13,15 @@ https://github.com/dabit3/foundry-workshop
 ### Install
 
 ```shell
+forge install
+# includes forge-std and openzeppelin-contracts
+
+# if you need to delete .git after cloning because of outer git tracking, need to execute the ff:
+rm -rf .git
+rm -rf .gitmodules lib/forge-std lib/openzeppelin-contracts
+forge install foundry-rs/forge-std
 forge install OpenZeppelin/openzeppelin-contracts
+# then you can safely run `forge install` again if needed
 ```
 
 ## Build
