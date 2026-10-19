@@ -27,7 +27,7 @@ forge install OpenZeppelin/openzeppelin-contracts
 ## Build
 
 ```shell
-$ forge build
+$ forge build --sizes
 ```
 
 ### Test
