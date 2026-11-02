@@ -18,7 +18,9 @@ contract DeployCounterScript is Script {
         string memory prefix = string(abi.encodePacked(network, "_"));
 
         // Get RPC URL and private key from environment
-        string memory rpcUrl = vm.envString(string(abi.encodePacked(prefix, "RPC_URL")));
+        string memory rpcUrl = vm.envString(
+            string(abi.encodePacked(prefix, "RPC_URL"))
+        );
 
         console.log("RPC URL:", rpcUrl);
         console.log("==========================================");
@@ -40,7 +42,10 @@ contract DeployCounterScript is Script {
         console.log("Network:", network);
     }
 
-    function _getEnvAddress(string memory prefix, string memory varName) internal view returns (address) {
+    function _getEnvAddress(
+        string memory prefix,
+        string memory varName
+    ) internal view returns (address) {
         string memory fullVar = string(abi.encodePacked(prefix, varName));
         return vm.envAddress(fullVar);
     }
