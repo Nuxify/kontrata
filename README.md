@@ -83,3 +83,5 @@ $ forge --help
 $ anvil --help
 $ cast --help
 ```
+
+Made with ❤️ at [Nuxify](https://nuxify.tech)
